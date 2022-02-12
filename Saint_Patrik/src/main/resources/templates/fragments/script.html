@@ -1,0 +1,44 @@
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>  
+    // Then 5s show alert        
+    setTimeout(p, 5000);  
+    function p(){
+    $('.alert').removeClass("hide");
+    $('.alert').addClass("show");
+    $('.alert').addClass("showAlert");
+    setTimeout(function(){
+    // Then 5s hide alert
+    $('.alert').removeClass("show");
+    $('.alert').addClass("hide");
+    }, 5000);
+    }
+    //Option the close alert
+    $('.close-btn').click(function(){
+    $('.alert').removeClass("show");
+    $('.alert').addClass("hide");
+    });
+
+
+
+</script>
+
+<script>
+    // function in charge of redirection
+    function redirection() {
+    window.location = "http://localhost:8080/expired";
+    }
+
+    // the function that redirects will be called after (15 seconds)
+    var temp = setTimeout(redirection, 15000);
+
+    // when moving anywhere in the document
+    document.addEventListener("mousemove", function() {
+    // clear the timer that was redirecting
+    clearTimeout(temp);
+    // and start it again
+    temp = setTimeout(redirection, 15000);
+    })
+</script>
+

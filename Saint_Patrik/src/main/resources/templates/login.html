@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+            <title>St Patrick's Bank</title>
+            <link rel="shortcut icon" href="img/logo.png">
+                <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+                        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+                            <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+                                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+                                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+                                            <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">	
+                                                <!-- Scroll Reveal -->
+                                                <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+                                                <link href="/css/style.css" rel="stylesheet">
+                                                    <link href="/css/four.css" rel="stylesheet">	
+                                                        </head>
+                                                        <body>
+
+                                                            <div class="image-inner">
+                                                                <div class="image-active">
+                                                                    <img alt="First slide" class="d-block w-100" src="/img/homebanking.jpg">
+                                                                        <div class="carousel-caption d-none d-md-block">
+
+                                                                            <br>
+                                                                                <div class="container-master">
+                                                                                <div class="container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-log-6 col-md6 col-sm-6 container card" style="background-color:rgba(22, 2, 2, 0.741);">
+                                                                                            <div class="container-elements">
+                                                                                                <img src="img/logo.png" alt="">
+                                                                                                    <h1 class="text-center">St Patrick's Bank</h1>
+                                                                                            </div>
+
+                                                                                            <div class="card-body">
+                                                                                                <form action="/logincheck" method="POST">
+                                                                                                    <p th:if="${error != null}" th:text="${error}" id="error" style="font-size:  11px; margin-bottom: -12px;"></p>
+                                                                                                    <p th:if="${logout != null}" th:text="${logout}" id="logout" style="font-size: 11px;margin-bottom: -12px"></p>
+                                                                                                    <div class="form-group">
+                                                                                                        <label for="cardNumber" style="color: #fff; display: flex; justify-content: left;">Card Number :</label>
+                                                                                                        <input id="cardNumber" type="text" name="cardNumber" class="form-control" placeholder="Type the card number" >
+                                                                                                    </div>                         
+                                                                                                    <div class="form-group">
+                                                                                                        <label for="password" style="color: #fff; display: flex; justify-content: left;">PIN :</label>
+                                                                                                        <input id="password" type="password" name="password" class="form-control" placeholder="Type the pin" >
+                                                                                                            <span id="spani"><i class="fa fa-eye" id="eye" aria-hidden="true" onclick="toggle()"></i>
+                                                                                                            </span>										
+                                                                                                    </div>																									
+                                                                                                    <div class="box-footer">
+                                                                                                        <button id="btnsubmit" type="submit" class="btn four mt-sm-1" ><span style="color: #000;">Login</span> </button>
+                                                                                                    </div>																	
+                                                                                                </form>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                    </div>                                                                                
+                                                                        </div>
+                                                                </div>
+
+                                                                <script>
+                                                                    var state=false;
+                                                                    function toggle(){
+                                                                    if(state){
+                                                                    document.getElementById("password").setAttribute("type", "password");
+                                                                    state=false;
+                                                                    document.getElementById("eye").style.color='#7a797e';
+
+                                                                    }else{
+                                                                    document.getElementById("password").setAttribute("type", "text");
+                                                                    state=true;
+                                                                    document.getElementById("eye").style.color='#5887ef';
+                                                                    }
+                                                                    }
+                                                                </script>	
+
+
+                                                        </body>
+                                                        </html>

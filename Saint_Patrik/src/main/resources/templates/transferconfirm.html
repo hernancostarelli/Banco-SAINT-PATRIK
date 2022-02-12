@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St Patrick's Bank</title>
+    <link rel="shortcut icon" href="/img/logo.png">
+    <!--<link rel="stylesheet" href="/css/style.css">-->
+    <link rel="stylesheet" href="/css/styleII.css">
+    <link rel="stylesheet" href="/css/styleIV.css">
+<!--    <link rel="stylesheet" href="/css/style_transfer.css">
+    -->
+   
+    
+    <link rel="stylesheet" href="/css/four.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+  
+     <header th:replace="/fragments/header :: header"></header>
+    <br>
+    <br>
+    <!-- MAIN -->
+    <div class="super-container">     
+     
+         <br>
+         <section>        
+            <div class="container-center">
+                <div class="container">
+                    <div class="info">
+                        <h2>Date</h2>
+                        <div class="son-info">
+                            <h3 th:text="${date}"></h3>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h2>From Card</h2>
+                        <div class="son-info">
+                            <h4 th:text="${session.cardSession.numberCard}"></h4>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h2>To Card</h2>
+                        <div class="son-info">
+                            <h4 th:text="${cardDestiny}"></h4>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h2>Description</h2>
+                        <div class="son-info">
+                            <h3 th:text="${description}"></h3>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h2>Amount</h2>
+                        <div class="son-info">
+                            <h5 th:text="'US$ '+${amount}"><span></span></h5>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="conta-al">
+                    <div class="al">
+                        <h3>SUCCESSFUL TRANSFER</h3>
+                    </div>
+                </div>
+                
+            </div>
+           
+         
+         </section>
+        </div>
+         <br>
+         
+    </div>
+       
+    
+      
+    <footer>
+        <div class="footer_logo">
+            <div class="copy">
+                <!-- <img src="img/logo.png" alt=""> -->
+              <h3>Copyright @ 2022 St Patrick's Bank</h3>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="/js/script_1.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

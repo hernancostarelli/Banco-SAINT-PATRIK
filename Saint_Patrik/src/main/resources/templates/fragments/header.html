@@ -1,0 +1,25 @@
+<header>
+        <div class="container">
+            <img src="/img/logo.png" alt="" >
+            <h2 class="logo">SAINT PATRICK'S</h2>
+            <div class="navar">
+                <nav>
+                
+                    <a th:href="@{/main}" th:class="${#httpServletRequest.requestURI.contains('main')} ? 'active' : 'link'">Home</a>                     
+                    <a th:href="@{/transaction/transactions}" th:if="${session.cardSession != null}" th:class="${#httpServletRequest.requestURI.contains('transactions')} ? 'active' : 'link'">Transactions</a>
+                    <a th:href="@{/transaction/newTransactiong}" th:if="${session.cardSession != null}" th:class="${#httpServletRequest.requestURI.contains('newTransactiong')} ? 'active' : 'link'" >Transfer</a> 
+                    <a href="/logout" th:if="${session.cardSession != null}">Exit</a>
+                    <!-- <ion-icon name="search-sharp"></ion-icon>
+                    <ion-icon name="help-circle-sharp"></ion-icon>
+                    <ion-icon name="close-circle-sharp"></ion-icon>
+                     -->
+                    
+                   
+                </nav>
+            </div>
+            <div class="icons">
+                    <ion-icon name="menu-sharp" style="color: #e9f5f5; font-size: 30px;" id="menu-bars"></ion-icon>
+                </div>
+        </div>
+        
+    </header>

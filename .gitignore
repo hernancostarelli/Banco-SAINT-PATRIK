@@ -1,0 +1,9 @@
+/Saint_Patrik/target/
+Saint_Patrik/target/classes/com/banco/Saint_Patrik/Repositories/CardRepository.class
+Saint_Patrik/target/classes/com/banco/Saint_Patrik/Repositories/UserRepository.class
+Saint_Patrik/target/classes/com/banco/Saint_Patrik/Configurations/SecuritySettings.class
+Saint_Patrik/target/classes/com/banco/Saint_Patrik/Controller/TransactionController.class
+Saint_Patrik/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+Saint_Patrik/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+Saint_Patrik/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+*.lst

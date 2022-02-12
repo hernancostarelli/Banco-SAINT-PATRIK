@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>St Patrick's Bank</title>
+                    <link rel="shortcut icon" href="/img/logo.png">
+                        <!--<link rel="stylesheet" href="/css/style.css">-->
+                        <link rel="stylesheet" href="/css/styleII.css">
+                            <link rel="stylesheet" href="/css/style_transfer.css">
+
+                                <link rel="stylesheet" href="/css/four.css">    
+                                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                            <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+
+                                                </head>
+                                                <body>
+
+                                                    <!-- HEADER -->
+
+                                                    <header th:replace="/fragments/header :: header"></header>
+                                                    <br>
+                                                        <br>
+                                                            <!-- MAIN -->
+                                                            <div class="super-container">
+
+
+                                                                <br>
+                                                                    <section class="border-container"> 
+
+
+
+                                                                        <h3>Transfer</h3>            
+                                                                        <div class="opera-master">
+
+
+
+                                                                            <form action="/transaction/newTransactionp" method="POST">
+
+                                                                                <div class="opera">
+
+
+                                                                                    <br> 
+
+                                                                                        <div class="transfer-Operation">  
+                                                                                            <br>  
+
+
+
+
+                                                                                                <div class="select-card-master">
+                                                                                                    <div class="select-card-one">
+                                                                                                        <h2 id="option">From Card</h2> 
+                                                                                                        <p th:text="${session.cardSession.user.name}+' '+${session.cardSession.user.surname} "></p>
+                                                                                                        <p th:text="${session.cardSession.numberCard}"></p>
+                                                                                                        <input type="hidden" name="cardOwn" th:value="${session}"/>
+
+
+                                                                                                    </div>
+                                                                                                    <div class="select-card-two">
+                                                                                                        <h2 id="option">To Card</h2>      
+                                                                                                        <select class="select-card" name="numberCardDestiny">
+                                                                                                            <option selected disabled >Select Card</option>
+                                                                                                            <option th:each="card:${cardAlta}" th:value="${card.numberCard}" th:text="${card.numberCard}"></option>
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br>     
+
+
+                                                                                                    </div> 
+                                                                                                    <div class="amount-usd">
+                                                                                                        <div class="wrapper">
+                                                                                                            <a href="../../java/com/banco/Saint_Patrik/Controller/TransactionController.java"></a>
+                                                                                                            <div class="input-data">
+                                                                                                                <input id="card" type="number" step="0.01" name="amount"  min="1" required autocomplete="off">
+                                                                                                                    <div class="underline"></div>
+                                                                                                                    <label for="amount">Type the amount (USD)</label>
+                                                                                                            </div>
+                                                                                                        </div>    
+                                                                                                    </div>
+
+
+                                                                                                    </div>
+                                                                                                    </div>
+                                                                                                    <div class="btn-confirm">
+                                                                                                        <button class="btn-t four" id="btnsubmit" type="submit" style="color: #fff; font-size: 16px; width: 600px; padding-top: 0px; "><span style="color: #000;">Confirm</span> </button>
+
+                                                                                                    </div>
+                                                                                                    </div>
+
+
+                                                                                                    </form>
+                                                                                                    </section>
+
+                                                                                                    </div>
+                                                                                                    <br>
+
+                                                                                                        </div>
+
+
+                                                                                                        <!--Footer-->
+                                                                                                        <footer th:replace="/fragments/footer :: footer"></footer>
+                                                                                                        
+                                                                                                        <script th:replace="/fragments/script :: script"></script>
+                                                                                                        </body>
+
+

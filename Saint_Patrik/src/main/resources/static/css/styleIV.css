@@ -1,0 +1,136 @@
+
+
+
+section .container-center{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+section .container{
+    padding: 20px 50px;
+    margin: 0;
+    width: 45%;
+    height: 50%;
+    background: #fff;    
+    margin-left: 20px;
+    margin-right: -10px;
+    border-top: 1px solid rgb(207, 202, 202);
+    border-right: 1px solid rgb(207, 202, 202);
+    border-bottom: 1px solid rgb(207, 202, 202);
+    border-left: 1px solid rgb(207, 202, 202);
+    border-radius: 23px;
+    
+}
+section .container .info {
+    
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;    
+    align-content: center;
+    
+}
+section .container .son-info{
+    
+    
+}
+.container h3{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    font-weight: 100;
+    font-size: 30px;
+}
+.container h2{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+
+section .container .info .son-info h2,
+section .container .info .son-info h3,
+section .container .info .son-info h4,
+section .container .info .son-info h5{
+    line-height: 2.0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-left: -10px;
+    margin-right: 50px;
+    font-weight: 200;
+    font-size: 30px;
+}
+section .container .info .son-info h3{
+    font-weight: 200;
+    font-size: 20px;
+}
+
+section .container .info .son-info h4{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+section .container .info .son-info h5{
+    font-weight: bolder;
+    color: #aaa;
+    font-size: 30px;
+}
+section .container .info .son-info span{
+    margin-left: 8px;
+    font-weight: 400;    
+    color: #aaa;
+    font-size: 30px;
+}
+
+/* alert */
+section .conta-al{
+    margin-left: -640px;
+    margin-right: 100px;
+    margin-top: -50px;
+}
+section .al{
+    margin-top: 350px;
+    margin-left:130px;
+    text-align: center;
+    font-size: 30px;
+    width: 13em;
+    height: 3.5em;   
+    border-top: 1px solid rgb(207, 202, 202);
+    border-right: 1px solid rgb(207, 202, 202);
+    border-bottom: 1px solid rgb(207, 202, 202);
+    border-left: 1px solid rgb(207, 202, 202);
+    background: var(--blue-green-dark);
+    color: #fff;
+    
+    
+}
+
+section .al h3{
+    font-size: 30px;
+    margin-top:30px;    
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+   
+   
+   
+   

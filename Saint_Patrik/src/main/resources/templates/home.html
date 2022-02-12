@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+            <title>St Patrick's Bank</title>
+            <link rel="shortcut icon" href="/img/logo.png">
+                <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+                        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+                            <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+                                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+                                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+                                            <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">	
+                                                <!-- Scroll Reveal -->
+                                                <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+                                                <link href="css/style.css" rel="stylesheet">
+                                                    <link href="css/four.css" rel="stylesheet">	
+                                                        </head>
+                                                        <body>
+
+                                                            <div class="image-inner">
+                                                                <div class="image-active">
+                                                                    <img alt="First slide" class="d-block w-100" src="/img/homebanking.jpg">
+                                                                        <div class="carousel-caption d-none d-md-block">
+
+                                                                            <br>
+
+                                                                                <div class="container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-log-6 col-md6 col-sm-6 container card" style="background-color:rgba(22, 2, 2, 0.741);">
+                                                                                            <div class="container-elements">
+                                                                                                <img src="img/logo.png" alt="">
+                                                                                                    <h1 class="text-center">St Patrick's Bank</h1>
+                                                                                            </div>
+
+                                                                                            <div class="card-body">
+                                                                                                <h3>Welcome</h3>
+
+                                                                                                <div class="">
+                                                                                                    <button class="btn four"><a th:href="@{/login}" class="active"><span style="color: #000;">Login</span></a> </button>
+
+                                                                                                </div>																	
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                        </div>
+                                                                </div>
+
+                                                                <script>
+                                                                    var state=false;
+                                                                    function toggle(){
+                                                                    if(state){
+                                                                    document.getElementById("password").setAttribute("type", "password");
+                                                                    state=false;
+                                                                    document.getElementById("eye").style.color='#7a797e';
+
+                                                                    }else{
+                                                                    document.getElementById("password").setAttribute("type", "text");
+                                                                    state=true;
+                                                                    document.getElementById("eye").style.color='#5887ef';
+                                                                    }
+                                                                    }
+                                                                </script>	
+
+
+                                                        </body>
+                                                        </html>

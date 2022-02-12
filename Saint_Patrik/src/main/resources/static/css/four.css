@@ -1,0 +1,26 @@
+.btn.four::after {
+	content: "";
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transition: .5s ease-in-out all;
+    border-radius: 1000px;
+	transform-origin: center;
+}
+
+.btn.four:hover::after {
+	transform: scale(600);
+	background: rgba(163, 122, 9, 0.795);
+}
+
+/* To remove the underline from links*/
+/* Para quitarle el subrayado a los enlaces*/
+a:link, a:visited,  a:hover, a:active
+{
+    color: #000000;
+    text-decoration: none;
+}

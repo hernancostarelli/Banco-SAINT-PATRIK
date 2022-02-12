@@ -1,0 +1,474 @@
+
+
+
+/* Operations */
+
+
+
+.border-container{
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    text-align: center;
+    flex-direction: column;
+}
+section .opera{
+    display: flex;
+    justify-content: left;
+    align-items: left;   
+    text-align:left;
+    flex-direction: column;
+    padding: 20px 0 30px;
+    margin: 0px;
+    margin-left: 50px;  
+    background: #fff;
+    margin-left: 40px;
+    margin-right: 100px;
+    border-top: 1px solid var(--blue-green-dark);
+    border-right: 1px solid var(--blue-green-dark);
+    border-bottom: 1px solid var(--blue-green-dark);
+    border-left: 1px solid var(--blue-green-dark);
+    border-radius: 23px;
+
+}
+
+.opera h3{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 30px;
+}
+.opera h2{
+    text-align: left;
+    margin-left: 50px;  
+    /*  display: flex;
+      justify-content: center; */ 
+
+}
+
+.transfer-Operations {
+    display: flex;
+    justify-content: space-around;
+    align-items: ;   
+    text-align: center;
+    flex-direction: column;
+    font-size: 18px;    
+    font-weight: 400;
+    color: #000;
+}
+
+.select-card-master{
+    display: flex;
+    justify-content: space-around;
+    margin-left: -600px;
+}
+.select-card-one {
+    margin-left: 600px;
+    margin-top: -62px;
+}
+.select-card-two {
+    margin-left: 200px;
+    margin-top: -60px;
+}
+#option{
+    font-size: 30px;
+    font-weight: 400;
+    color: #095757;
+}
+
+.amount-usd{
+    margin-left: 350px;
+}
+.comment-add{
+    margin-top: -70px;
+    margin-left: 150px;
+}
+.wrapper{    
+    width: 450px; 
+    padding: 30px;
+
+}
+.wrapper .input-data{
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 35px;
+    font-family: Roboto;
+    border-bottom: 2px solid silver;
+}
+.wrapper .input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.8s ease;
+
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-30px);
+    font-size: 15px;
+    color: #095757;
+}
+
+.wrapper .input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    /* background: #4158d0; */
+}
+.input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #f0c44e;
+    transform: scaleX(0);
+    transition:  0.9s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{
+    transform: scaleX(1);
+}
+
+.form-control{
+    margin-left: 50px;  
+    font-size: 32px;  
+}
+.usd{    
+    font-size: 32px;  
+}
+.comment{
+    text-align: left;
+    margin-left: 50px
+        font-size: 18px;
+}
+
+.select-card{
+    align-items: left; 
+    text-align: left;
+    margin-left: 50px;  
+    font-size: 18px;    
+    font-weight: 400;
+    color: #000;
+}
+
+
+/* Btn */
+
+section .btn-confirm{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-left: -26em;
+    position: absolute;
+    margin-top: 440px;
+    width: 50%;
+
+}
+
+section h3{
+    padding: -10px;
+    margin: 14px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #095757;
+}
+
+section .btn-b{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 20em;
+    margin-left: 45.5em;	
+    height: 50px;
+    background: #000;
+    color: #fff;;
+
+    font-size: 10px;
+    font-weight: 16.75em;
+    border: none;
+    cursor: pointer;
+
+    transition: .5s ease all;
+    border-radius: 5px;
+    position: relative; 	 
+    background-color: #f0c44e;
+
+}
+
+section .btn-b:hover{
+    color: #fff;
+
+}
+section .btn-b ico-icon{
+    --ionicon-stroke-width: 50px;
+
+}
+
+
+
+
+
+
+
+/* Media Queries */
+@media screen and (max-width: 1029px){
+    .border-container{
+        display: flex;
+        justify-content: center;  
+        align-items: center; 
+        text-align: center;
+        flex-direction: column;
+    }
+    section .opera{
+        display: flex;
+        justify-content: left;
+        align-items: left;   
+        text-align:left;
+        flex-direction: column;
+        padding: 30px 0;
+        margin: 0px;
+        margin-left: 50px;  
+        background: #fff;
+        margin-left: 90px;
+        margin-right: 100px;
+        border-top: 1px solid var(--blue-green-dark);
+        border-right: 1px solid var(--blue-green-dark);
+        border-bottom: 1px solid var(--blue-green-dark);
+        border-left: 1px solid var(--blue-green-dark);
+        border-radius: 23px;
+
+    }
+
+    .opera h3{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 30px;
+    }
+    .opera h2{
+        text-align: left;
+        margin-left: 50px;  
+        /*  display: flex;
+          justify-content: center; */ 
+
+    }
+
+    .transfer-Operations {
+
+        align-items: ;   
+        text-align: center;    
+        font-size: 18px;    
+        font-weight: 400;
+        color: #000;
+    }
+
+    .select-card-master{
+
+        margin-left: -500px;
+    }
+    .select-card-one {
+        margin-left: 450px;
+        margin-top: -62px;
+    }
+    .select-card-two {
+        margin-left: -100px;
+        margin-top: -60px;
+    }
+    #option{
+        font-size: 30px;
+        font-weight: 400;
+        color: #095757;
+    }
+
+    .amount-usd{
+        margin-left: 350px;
+    }
+    .comment-add{
+        margin-top: -70px;
+        margin-left: 150px;
+    }
+    .wrapper{    
+        width: 350px; 
+        padding: 30px;
+
+    }
+    .wrapper .input-data{
+        height: 40px;
+        width: 100%;
+        position: relative;
+    }
+    .wrapper .input-data input{
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-size: 17px;
+        border-bottom: 2px solid silver;
+    }
+
+  
+
+    #btnsubmit{
+        width: 800px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 900px){
+
+    #btnsubmit{
+        width: 500px;
+        font-size: 12px;
+    }
+    .wrapper{    
+        width: 250px; 
+        padding: 30px;
+        margin-left: -300px;
+    }
+
+}
+
+@media screen and (max-width: 858px){
+
+    .wrapper{    
+        width: 250px; 
+        padding: 20px;
+        margin-left: -300px;
+
+    }
+
+    #btnsubmit{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 861px){
+    .wrapper{    
+        width: 250px; 
+        padding: 30px;
+        margin-left: -300px;
+
+    }
+
+}
+
+@media screen and (max-width: 630px){
+    .select-card-master{
+
+        margin-left: -600px;
+    }
+    .select-card-one {
+        margin-left: 550px;
+        margin-top: -62px;
+    }
+    .select-card-two {
+        margin-left: -730px;
+        margin-top: 20px;
+    }
+    #option{
+        font-size: 16px;
+        font-weight: 400;
+        color: #095757;
+    }
+
+  section .opera{
+     display: flex;
+    justify-content: left;
+    align-items: left;   
+    text-align:left;
+    flex-direction: column;
+    padding: 30px 0;
+    margin: 0px;
+    margin-left: 0px;  
+    background: #fff;
+    margin-left: -40px;
+    margin-right: 100px;
+    border-top: 1px solid var(--blue-green-dark);
+    border-right: 1px solid var(--blue-green-dark);
+    border-bottom: 1px solid var(--blue-green-dark);
+    border-left: 1px solid var(--blue-green-dark);
+    border-radius: 23px;
+
+}
+}
+@media screen and (max-width: 763px){
+
+.select-card-master{
+
+        margin-left: -600px;
+    }
+    .select-card-one {
+        margin-left: 550px;
+        margin-top: -62px;
+    }
+    .select-card-two {
+        margin-left: -630px;
+        margin-top: 20px;
+    }
+    #option{
+        font-size: 16px;
+        font-weight: 400;
+        color: #095757;
+    }
+   section .opera{
+    display: flex;
+    justify-content: left;
+    align-items: left;   
+    text-align:left;
+    flex-direction: column;
+    padding: 30px 0;
+    margin: 0px;  
+    background: #fff;
+    margin-left: -90px;
+    margin-right: 10px;
+    border-top: 1px solid var(--blue-green-dark);
+    border-right: 1px solid var(--blue-green-dark);
+    border-bottom: 1px solid var(--blue-green-dark);
+    border-left: 1px solid var(--blue-green-dark);
+    border-radius: 23px;
+
+}
+section .btn-confirm{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-left: -200px;
+    position: absolute;
+    margin-top: 320px;
+    width: 50%;
+
+}
+}
+@media screen and (max-width: 536px){
+    .opera-master{
+        margin-left: -500px;
+    }
+    
+}
+
+@media screen and (max-width: 474px){
+
+
+}
+
+
+@media screen and (max-width: 1220px){
+
+
+}
+
+
