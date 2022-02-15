@@ -45,12 +45,12 @@ public class TransactionController {
             }
 
 //            String idUser = login.getUser().getId();
-            List<TransactionEntity> listTransaction = cardService.searchAllTransactions(login.getId());
+            List<TransactionEntity> listTransaction = transactionService.searchTransactionByLast30Days(login.getId());
 //            List<TransactionEntity> listTransaction = transactionService.searchTransactionByLast30Days(login.getId());
 
             model.addAttribute("last30Days", listTransaction);
 
-            return "transaction.html";
+            return "transactions.html";
 
         } catch (ErrorService e) {
             System.out.println(e.getMessage());

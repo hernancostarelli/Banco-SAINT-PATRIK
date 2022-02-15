@@ -14,6 +14,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import java.text.DecimalFormat;
 
 @Service
 public class TransactionService {
@@ -65,6 +66,10 @@ public class TransactionService {
         Date dateTransaction1 = new Date();
 
         if (cardOwn.getCredit() >= amount) {
+            
+          DecimalFormat df =new DecimalFormat("#.00");
+          df.format(amount);
+            
             transaction1.setUser(cardOwn.getUser());
             transaction1.setEnabled(true);
             transaction1.setCard(cardOwn);
