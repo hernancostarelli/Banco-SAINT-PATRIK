@@ -15,6 +15,6 @@ Reference Documentation For further reference, please consider the following sec
     2. You can clone the project with Git 
     3. Create a database called 'banco' with Workbench, DBeaver or one of your choose. 
     4. After you have cloned the project, open it with your an IDE,run it and check you will need to add data to your Database to check it works. 
-    5. Hope you have fun doing money transactions !! 
+    5. Hope you have fun making money transactions !! 
     
 thanks to  ID for Ideas for this opportunity!!
