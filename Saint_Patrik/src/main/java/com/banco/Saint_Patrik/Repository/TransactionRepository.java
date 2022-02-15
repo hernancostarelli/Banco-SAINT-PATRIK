@@ -104,8 +104,8 @@ public interface TransactionRepository extends JpaRepository<TransactionEntity, 
      * @param id
      * @return
      */
-    @Query(value = "SELECT t from TransactionEntity t WHERE t.dateTransaction BETWEEN  "
-            + "DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW() AND t.card.id = :card_id order by t.dateTransaction DESC", nativeQuery = true)
-    public List<TransactionEntity> searchTransactionByLast30Days(@Param("card_id") String id);
+    @Query(value = "SELECT * from transaction_entity   WHERE date_transaction BETWEEN  "
+            + "DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW() AND card_id= :card.id  order by date_transaction DESC", nativeQuery = true)
+    public List<TransactionEntity> searchTransactionByLast30Days(@Param("card.id") String id);
 
 }
