@@ -50,7 +50,7 @@ public class TransactionController {
 
             model.addAttribute("last30Days", listTransaction);
 
-            return "transactions.html";
+            return "transaction.html";
 
         } catch (ErrorService e) {
             System.out.println(e.getMessage());
