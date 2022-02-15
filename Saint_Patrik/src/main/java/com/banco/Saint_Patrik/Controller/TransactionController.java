@@ -55,7 +55,6 @@ public class TransactionController {
         } catch (ErrorService e) {
             System.out.println(e.getMessage());
             redirectAttributes.addFlashAttribute("error", "THERE WAS AN ERROR DISPLAYING TRANSACTIONS FOR THE LAST 30 DAYS");
-
             return "redirect:/";
         }
 
@@ -117,20 +116,21 @@ public class TransactionController {
 
             Date date = new Date();
 
-            model.put("date", new SimpleDateFormat("dd-MM-yyyy").format(date));
-            model.put("cardDestiny", numberCardDestiny);
-            model.put("description", "SEND");
-            model.put("amount", amount);
+            redirectAttributes.addFlashAttribute("date", new SimpleDateFormat("dd-MM-yyyy").format(date));
+            redirectAttributes.addFlashAttribute("cardDestiny", numberCardDestiny);
+            redirectAttributes.addFlashAttribute("description", "SEND");
+            redirectAttributes.addFlashAttribute("amount", amount);
             model.addAttribute("success", "THE TRANSACTION WAS SUCCESSFULLY GENERATED");
 
             return "transferconfirm.html";
 
         } catch (ErrorService e) {
             System.out.println(e.getMessage());
-            model.addAttribute("error", e.getMessage());
+            //model.addAttribute("error", e.getMessage());
             //redirectAttributes.addFlashAttribute("idUser", idUser);
 //            model.addAttribute("idCardDestiy", cardDestiny);
-            model.addAttribute("amount", amount);
+            redirectAttributes.addFlashAttribute("error", e.getMessage());
+            redirectAttributes.addFlashAttribute("amount", amount);
 
             return "redirect:/transaction/newTransactiong";
         }
