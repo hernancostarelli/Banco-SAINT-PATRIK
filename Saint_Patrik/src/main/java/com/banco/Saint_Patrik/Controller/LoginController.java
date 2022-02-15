@@ -19,7 +19,7 @@ public class LoginController {
 
     @Autowired
     private CardService cardService;
-    
+
     @Autowired
     private TransactionService transactionService;
 
@@ -31,7 +31,8 @@ public class LoginController {
 
             return "redirect:/login";
         }
-        List<TransactionEntity> allTransactions = cardService.searchAllTransactions(login.getId());
+//        List<TransactionEntity> allTransactions = cardService.searchAllTransactions(login.getId());
+        List<TransactionEntity> allTransactions = transactionService.searchTransactionByLast30Days(login.getId());
         model.addAttribute("transactions", allTransactions);
 
         return "index.html";
@@ -41,7 +42,7 @@ public class LoginController {
     @GetMapping("/login")
     public String login(@RequestParam(required = false) String error,
             @RequestParam(required = false) String logout, ModelMap model) {
-        
+
         if (error != null) {
             model.put("error", "INCORRECT USERNAME OR PASSWORD"); //hay que mostrarlo en la vista login.html                       
         }
@@ -68,11 +69,10 @@ public class LoginController {
     public String home() {
         return "home.html";
     }
-    
-    
+
     @GetMapping("/expired")
     public String expired(ModelMap model) {
-        
+
         return "expired.html";
     }
 }
