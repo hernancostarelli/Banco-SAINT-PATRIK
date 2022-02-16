@@ -28,15 +28,17 @@
     <div class="super-container">
 
 
-        <br>
-            
-        <div th:if="${error}!=null" class="card text-red bg-danger mb-3">
-        <div class="card-body">
-        <p class="card-text" th:text="${error}"></p>
-        </div>
-        </div> 
 
-        <section class="border-container"> 
+                 <br>
+                                                                    
+                  <div th:if="${error}!=null" class="card text-red bg-danger mb-3">
+                       <div class="card-body">
+                        <p class="card-text" th:text="${error}"></p>
+                        </div>
+                   </div> 
+            <section class="border-container"> 
+
+      
 
             <h3>Transfer</h3>    
 
@@ -108,10 +110,12 @@
 </div>
 
 
-<!--Footer-->
-<footer th:replace="/fragments/footer :: footer"></footer>
 
-<script th:replace="/fragments/script :: script"></script>
-</body>
+                                                                                                       <!--Footer-->
+                                                                                                        <footer th:replace="/fragments/footer :: footer"></footer>
+
+                                                                                                        <script th:replace="/fragments/script :: script"></script>
+                                                                                                        </body>
+
 
 

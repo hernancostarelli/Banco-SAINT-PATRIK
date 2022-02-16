@@ -1,5 +1,5 @@
 
-/* Creamos nuestras variables, mediante :root accedemos a la ruta de css */
+
 :root{
     --yellow: #f0c44e;
     --blue-green-dark: #095757;
@@ -8,7 +8,7 @@
     --light-blue:#78b4b6;
 }
 
-/* Para que en todos los navegadores se vea igual */
+
 *{
     margin: 0;
     padding: 0;
@@ -23,7 +23,7 @@ body{
 .container{
     width: 95%;
     margin: auto;
-   
+
 }
 
 
@@ -31,28 +31,30 @@ body{
 header{
     padding: 30px 0;
     background: var(--nav);
-    
+
 }
 
-/* Para acceder al header del contenedor */
+
 header .container{
     display: flex;
     justify-content: flex-start; 
-    
+
     align-items: left;   
 }
+
 header .container img{
-    margin-left: 3.33em;
-	width: 50px;
-	height: 50px;
+    margin-left: 16.5em;
+    width: 50px;
+    height: 50px;
     margin-top: 5px;
     display: flex; 
-	justify-content: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
 
 }
 header .container h2{
-    margin-left: 100px;
+    margin-left:160px;
+    margin-top: 3px;
     font-weight:bold;
 }
 
@@ -78,7 +80,7 @@ main{
     border-bottom: 1px solid rgb(207, 202, 202);
     border-left: 1px solid rgb(207, 202, 202);
     border-radius: 23px;
-    
+
 }
 
 /* Para acceder al header del contenedor */
@@ -91,15 +93,15 @@ main{
 
 .section{
     width: 80%;
-    
+
 }
 section .container-center{
     display: flex;
     justify-content: center;
-  flex-direction: column;
+    flex-direction: column;
     text-align: center;
     align-items: center;
-    
+
 }
 section .container{
     padding: 20px 50px;
@@ -114,7 +116,7 @@ section .container{
     border-bottom: 1px solid rgb(207, 202, 202);
     border-left: 1px solid rgb(207, 202, 202);
     border-radius: 23px;
-    
+
 }
 
 
@@ -129,7 +131,7 @@ section .container{
 /* alert */
 
 section .alert{
-    
+
     /* margin-top: 350px;
     margin-left:130px;*/
     text-align: center;
@@ -142,11 +144,11 @@ section .alert{
     border-left: 1px solid rgb(207, 202, 202);
     background: var(--blue-green-dark);
     color: #fff;
-    
-    
+
+
 }
 .message-alert{
-    
+
     margin-top: 50px;
     font-weight: 200;
     font-size: 20px;
@@ -164,25 +166,24 @@ section .alert h3{
 
 .button{
     margin: auto;
-	margin-top: 2em;
-     /* margin-bottom: 2em; 
-	 margin-left: 32.5em;  */
-	width: 200px;
-	height: 60px;
-	background: #000;
-	color: #000;
-	
-	font-size: 20px;
-	font-weight: 18.75em;
-	border: none;
-	cursor: pointer;
-	text-transform: uppercase;
+    margin-top: 2em;
+    margin-left: 0px;  
+    width: 200px;
+    height: 60px;
+    background: #000;
+    color: #000;
+
+    font-size: 20px;
+    font-weight: 18.75em;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
     transition: .5s ease all;
-	border-radius: 15px;
-	position: relative; 
-	overflow: hidden; 
-	background-color: #f0c44e;
-    
+    border-radius: 15px;
+    position: relative; 
+    overflow: hidden; 
+    background-color: #f0c44e;
+
 }
 
 section .button:hover{
@@ -196,30 +197,30 @@ section .btn ico-icon{
 /* Footer */
 
 footer{
-    
+
     padding: 30px 0;
     background: var(--yellow);
-    
-   
-	
+
+
+
 }
 footer .footer_logo{
     display: flex;
     justify-content: flex-start; 
-     
+
 }
 footer img{
-    
+
     margin-left: 5.5em;
-	width: 50px;
-	height: 50px;
+    width: 50px;
+    height: 50px;
     margin-top: 5px;           
-    
+
 }
 
 footer .footer_logo h3{
     margin: auto;
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: 400;    
     margin-left: 29em; 
     font-size: 18px;
@@ -227,7 +228,7 @@ footer .footer_logo h3{
 }
 
 .super-container{
-    min-height: calc(100vh - 275px);
+    min-height: calc(100vh - 185px);
 }
 
 
@@ -235,79 +236,313 @@ footer .footer_logo h3{
 
 
 /* Media Queries */
-@media screen and (max-width: 1420px){
+@media screen and (max-width: 1720px){
     header .logo{
-        margin-bottom: 10px;
+        margin-bottom: -1px;
         font-size: 30px;
     }
 
     header .container {
         flex-direction: column;
         text-align: center;
-       
+
     }
+
     header .container h2{
-        margin-top:-55px;
+        margin-left: -0.5em;
+        margin-top:-45px;       
         margin-right: 5px;
-        font-weight:400;
-    }
-    header .navar{
-        margin-top: 20px;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        align-content: center;
-        margin-left: 150px;
+        font-weight:700;
     }
 
-    
+
+
     footer .footer_logo h3{
-        margin-top: 20px;
-        text-align: initial;   
-        font-weight: 400;
-        margin-left: 200px;
-        font-size: 18px;
-    
+        margin: auto;
+        margin-top: 10px;
+        font-weight: 400;    
+        margin-left: 45em; 
+        font-size: 16px;
+
     }
 
-    /* footer img{
+    header .container img{
+        margin-left: 16.5em;
+        width: 50px;
+        height: 50px;
+        margin-top: 6px;
+        display: flex; 
+        justify-content: flex-start;
         flex-direction: column;
-        align-items: center;
-        align-content: center;
-        margin-left: 690px;
-    } */
-    
-    
-   
+
+    }
+    .super-container{
+        min-height: calc(100vh - 225px);
+    }
+
+
 }
 
-@media screen and (max-width: 900px){
-    
-    footer .footer_logo h3{
-        margin-top: 20px;
-        text-align: initial;   
-        font-weight: 400;
-        margin-left: 160px;
-        font-size: 18px;
-    
-    }
+@media screen and (max-width: 1200px){
+
     header .logo{
-        margin-bottom: 10px;
-        font-size: 10px;
-        text-align: center;
+        margin-bottom: -1px;
+        font-size: 30px;
     }
 
     header .container {
         flex-direction: column;
         text-align: center;
-       
+
     }
+
+
     header .container h2{
-        margin-top:10px;
-        margin-right: -40px;
-        font-weight:500;
+        margin-left: 1.5em;
+        margin-top:40px;       
+        margin-right: 5px;
+        font-weight:700;
     }
-    
+
+
+    section .alert{
+
+        /* margin-top: 350px;
+        margin-left:130px;*/
+        text-align: center;
+        font-size: 30px;
+        width: 13em;
+        height: 3.5em;   
+        border-top: 1px solid rgb(207, 202, 202);
+        border-right: 1px solid rgb(207, 202, 202);
+        border-bottom: 1px solid rgb(207, 202, 202);
+        border-left: 1px solid rgb(207, 202, 202);
+        background: var(--blue-green-dark);
+        color: #fff;
+
+
+    }
+    .message-alert{
+
+        margin-top: 50px;
+        font-weight: 200;
+        font-size: 25px;
+        font-style: black;
+    }
+
+    section .alert h3{
+        font-size: 30px;
+        margin-top:30px;    
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        font-weight: 300;    
+    }
+
+    footer .footer_logo h3{
+        margin: auto;
+        margin-top: 10px;
+        font-weight: 400;    
+        margin-left: 48em; 
+        font-size: 16px;
+
+    }
+
+    header .container img{
+        margin-left: 12.5em;
+        width: 50px;
+        height: 50px;
+        margin-top: 6px;
+        display: flex; 
+        justify-content: flex-start;
+        flex-direction: column;
+
+    }
+    .button{
+        margin: auto;
+        margin-top: 2em;
+        margin-left: 130px;  
+        width: 200px;
+        height: 60px;
+        background: #000;
+        color: #000;
+
+        font-size: 20px;
+        font-weight: 18.75em;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: .5s ease all;
+        border-radius: 15px;
+        position: relative; 
+        overflow: hidden; 
+        background-color: #f0c44e;
+
+    }
+   
+
+}
+
+@media screen and (max-width: 1172px){
+
+    header .logo{
+        margin-bottom: 16px;
+        font-size: 30px;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    header .container h2{
+        margin-left: 1.5em;
+        font-size: 40px;
+        margin-top:-45px;       
+        margin-right: 5px;
+        font-weight:700;
+    }
+
+    section .container-center{
+        margin-top: -600px;
+        margin-left: -50px;        
+    }
+    section .alert{        
+        margin-top: -500px;       
+        text-align: center;
+        font-size: 25px;
+        width: 12em;
+        height: 3.9em;   
+        border-top: 1px solid rgb(207, 202, 202);
+        border-right: 1px solid rgb(207, 202, 202);
+        border-bottom: 1px solid rgb(207, 202, 202);
+        border-left: 1px solid rgb(207, 202, 202);
+        background: var(--blue-green-dark);
+        color: #fff;
+
+
+    }
+    .message-alert{
+        margin-left: 50px;
+        margin-top: 50px;
+        font-weight: 200;
+        font-size: 20px;
+        font-style: black;
+    }
+
+    section .alert h3{
+        font-size: 30px;
+        margin-top:30px;    
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        font-weight: 300;    
+    }
+
+    footer .footer_logo h3{
+        margin: auto;
+        margin-top: 10px;
+        font-weight: 400;    
+        margin-left: 48em; 
+        font-size: 16px;
+
+    }
+
+    header .container img{
+        margin-left: 12.5em;
+        width: 50px;
+        height: 50px;
+        margin-top: 6px;
+        display: flex; 
+        justify-content: flex-start;
+        flex-direction: column;
+
+    }
+    .super-container{
+        min-height: calc(100vh - 225px);
+    }
+
+}
+@media screen and (mix-width: 900px){
+
+    header .logo{
+        margin-bottom: 16px;
+        font-size: 30px;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    header .container h2{
+        margin-left: 12.5em;
+        font-size: 40px;
+        margin-top:-45px;       
+        margin-right: 5px;
+        font-weight:700;
+    }
+
+    section .container-center{
+        margin-top: -600px;
+        margin-left: -50px;        
+    }
+    section .alert{        
+        margin-top: -500px;       
+        text-align: center;
+        font-size: 25px;
+        width: 12em;
+        height: 3.9em;   
+        border-top: 1px solid rgb(207, 202, 202);
+        border-right: 1px solid rgb(207, 202, 202);
+        border-bottom: 1px solid rgb(207, 202, 202);
+        border-left: 1px solid rgb(207, 202, 202);
+        background: var(--blue-green-dark);
+        color: #fff;
+
+
+    }
+    .message-alert{
+        margin-left: 50px;
+        margin-top: 50px;
+        font-weight: 200;
+        font-size: 20px;
+        font-style: black;
+    }
+
+    section .alert h3{
+        font-size: 30px;
+        margin-top:30px;    
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        font-weight: 300;    
+    }
+
+    footer .footer_logo h3{
+        margin: auto;
+        margin-top: 10px;
+        font-weight: 400;    
+        margin-left: 38em; 
+        font-size: 16px;
+
+    }
+
+    header .container img{
+        margin-left: 1.5em;
+        width: 50px;
+        height: 50px;
+        margin-top: 6px;
+        display: flex; 
+        justify-content: flex-start;
+        flex-direction: column;
+
+    }
+    .super-container{
+        min-height: calc(100vh - 225px);
+    }
 
 }
 
@@ -322,7 +557,7 @@ footer .footer_logo h3{
     header .container {
         flex-direction: column;
         text-align: center;
-       
+
     }
     header .container h2{
         margin-top:10px;
@@ -385,13 +620,13 @@ footer .footer_logo h3{
         font-weight: 300;
         font-size: 15px;
     }
-    
+
     section .container .info .son-info h4{
         font-weight: 400;
         font-size: 13px;
     }
-    
-    
+
+
     section .container .info .son-info h5{
         font-weight: bolder;
         color: #aaa;
@@ -416,14 +651,14 @@ footer .footer_logo h3{
         border-left: 1px solid rgb(207, 202, 202);
         background: var(--blue-green-dark);
         color: #fff;
-        
-        
+
+
     }
     section .container-center{
         display: flex;
         justify-content: center;
         align-content: center;
-        
+
     }
     section .container{
         padding: 20px 20px;
@@ -438,9 +673,9 @@ footer .footer_logo h3{
         border-bottom: 1px solid rgb(207, 202, 202);
         border-left: 1px solid rgb(207, 202, 202);
         border-radius: 23px;
-        
+
     }
-    
+
 }
 
 @media screen and (max-width: 611px){
@@ -453,7 +688,7 @@ footer .footer_logo h3{
     header .container {
         flex-direction: column;
         text-align: center;
-       
+
     }
     header .container h2{
         margin-top:10px;
@@ -516,13 +751,13 @@ footer .footer_logo h3{
         font-weight: 300;
         font-size: 15px;
     }
-    
+
     section .container .info .son-info h4{
         font-weight: 400;
         font-size: 13px;
     }
-    
-    
+
+
     section .container .info .son-info h5{
         font-weight: bolder;
         color: #aaa;
@@ -547,14 +782,14 @@ footer .footer_logo h3{
         border-left: 1px solid rgb(207, 202, 202);
         background: var(--blue-green-dark);
         color: #fff;
-        
-        
+
+
     }
     section .container-center{
         display: flex;
         justify-content: center;
         align-content: center;
-        
+
     }
     section .container{
         padding: 20px 20px;
@@ -569,20 +804,20 @@ footer .footer_logo h3{
         border-bottom: 1px solid rgb(207, 202, 202);
         border-left: 1px solid rgb(207, 202, 202);
         border-radius: 23px;
-        
+
     }
 
-       
+
     footer .footer_logo h3{
         margin-top: 20px;
         text-align: initial;   
         font-weight: 400;
         margin-left: 100px;
         font-size: 14px;
-    
+
     }
-    
-   }
+
+}
 
 @media screen and (max-width: 751px){
     header .logo{
@@ -594,7 +829,7 @@ footer .footer_logo h3{
     header .container {
         flex-direction: column;
         text-align: center;
-       
+
     }
     header .container h2{
         margin-top:0px;
@@ -657,13 +892,13 @@ footer .footer_logo h3{
         font-weight: 300;
         font-size: 15px;
     }
-    
+
     section .container .info .son-info h4{
         font-weight: 400;
         font-size: 13px;
     }
-    
-    
+
+
     section .container .info .son-info h5{
         font-weight: bolder;
         color: #aaa;
@@ -688,14 +923,14 @@ footer .footer_logo h3{
         border-left: 1px solid rgb(207, 202, 202);
         background: var(--blue-green-dark);
         color: #fff;
-        
-        
+
+
     }
     section .container-center{
         display: flex;
         justify-content: center;
         align-content: center;
-        
+
     }
     section .container{
         padding: 20px 20px;
@@ -710,17 +945,17 @@ footer .footer_logo h3{
         border-bottom: 1px solid rgb(207, 202, 202);
         border-left: 1px solid rgb(207, 202, 202);
         border-radius: 23px;
-        
+
     }
 
-       
+
     footer .footer_logo h3{
         margin-top: 20px;
         text-align: initial;   
         font-weight: 400;
         margin-left: 100px;
         font-size: 12px;
-    
+
     }
 
 }
@@ -734,7 +969,7 @@ footer .footer_logo h3{
     header .container {
         flex-direction: column;
         text-align: center;
-       
+
     }
     header .container h2{
         margin-top:10px;
@@ -797,13 +1032,13 @@ footer .footer_logo h3{
         font-weight: 300;
         font-size: 15px;
     }
-    
+
     section .container .info .son-info h4{
         font-weight: 400;
         font-size: 13px;
     }
-    
-    
+
+
     section .container .info .son-info h5{
         font-weight: bolder;
         color: #aaa;
@@ -828,14 +1063,14 @@ footer .footer_logo h3{
         border-left: 1px solid rgb(207, 202, 202);
         background: var(--blue-green-dark);
         color: #fff;
-        
-        
+
+
     }
     section .container-center{
         display: flex;
         justify-content: center;
         align-content: center;
-        
+
     }
     section .container{
         padding: 20px 20px;
@@ -850,17 +1085,17 @@ footer .footer_logo h3{
         border-bottom: 1px solid rgb(207, 202, 202);
         border-left: 1px solid rgb(207, 202, 202);
         border-radius: 23px;
-        
+
     }
 
-       
+
     footer .footer_logo h3{
         margin-top: 20px;
         text-align: initial;   
         font-weight: 400;
         margin-left: 0;
         font-size: 12px;
-    
+
     }  
     section{
         flex-direction: column;
@@ -868,7 +1103,7 @@ footer .footer_logo h3{
     header .navar a{
         flex-direction: column;
     }
-    
+
     header .navar{
         margin-top: 20px;
         flex-direction: column;
@@ -879,9 +1114,9 @@ footer .footer_logo h3{
         margin-left: 50px;
     }
 
-   
-  }
-  @media screen and (max-width: 564px){
+
+}
+@media screen and (max-width: 564px){
     header .logo{
         margin-bottom: 10px;
         font-size: 10px;
@@ -891,7 +1126,7 @@ footer .footer_logo h3{
     header .container {
         flex-direction: column;
         text-align: center;
-       
+
     }
     header .container h2{
         margin-top:10px;
@@ -954,13 +1189,13 @@ footer .footer_logo h3{
         font-weight: 300;
         font-size: 15px;
     }
-    
+
     section .container .info .son-info h4{
         font-weight: 400;
         font-size: 13px;
     }
-    
-    
+
+
     section .container .info .son-info h5{
         font-weight: bolder;
         color: #aaa;
@@ -985,14 +1220,14 @@ footer .footer_logo h3{
         border-left: 1px solid rgb(207, 202, 202);
         background: var(--blue-green-dark);
         color: #fff;
-        
-        
+
+
     }
     section .container-center{
         display: flex;
         justify-content: center;
         align-content: center;
-        
+
     }
     section .container{
         padding: 20px 20px;
@@ -1007,17 +1242,17 @@ footer .footer_logo h3{
         border-bottom: 1px solid rgb(207, 202, 202);
         border-left: 1px solid rgb(207, 202, 202);
         border-radius: 23px;
-        
+
     }
 
-       
+
     footer .footer_logo h3{
         margin-top: 20px;
         text-align: initial;   
         font-weight: 400;
         margin-left: 0;
         font-size: 12px;
-    
+
     }  
     section{
         flex-direction: column;
@@ -1025,7 +1260,7 @@ footer .footer_logo h3{
     header .navar a{
         flex-direction: column;
     }
-    
+
     header .navar{
         margin-top: 20px;
         flex-direction: column;
@@ -1036,10 +1271,10 @@ footer .footer_logo h3{
         margin-left: 50px;
     }
 
-   
-   }
 
-   @media screen and (max-width: 544px){
+}
+
+@media screen and (max-width: 544px){
     header .logo{
         margin-bottom: 10px;
         font-size: 10px;
@@ -1049,7 +1284,7 @@ footer .footer_logo h3{
     header .container {
         flex-direction: column;
         text-align: center;
-       
+
     }
     header .container h2{
         margin-top:10px;
@@ -1112,13 +1347,13 @@ footer .footer_logo h3{
         font-weight: 300;
         font-size: 15px;
     }
-    
+
     section .container .info .son-info h4{
         font-weight: 400;
         font-size: 13px;
     }
-    
-    
+
+
     section .container .info .son-info h5{
         font-weight: bolder;
         color: #aaa;
@@ -1143,14 +1378,14 @@ footer .footer_logo h3{
         border-left: 1px solid rgb(207, 202, 202);
         background: var(--blue-green-dark);
         color: #fff;
-        
-        
+
+
     }
     section .container-center{
         display: flex;
         justify-content: center;
         align-content: center;
-        
+
     }
     section .container{
         padding: 20px 20px;
@@ -1165,17 +1400,17 @@ footer .footer_logo h3{
         border-bottom: 1px solid rgb(207, 202, 202);
         border-left: 1px solid rgb(207, 202, 202);
         border-radius: 23px;
-        
+
     }
 
-       
+
     footer .footer_logo h3{
         margin-top: 20px;
         text-align: initial;   
         font-weight: 400;
         margin-left: 0;
         font-size: 12px;
-    
+
     }  
     section{
         flex-direction: column;
@@ -1183,7 +1418,7 @@ footer .footer_logo h3{
     header .navar a{
         flex-direction: column;
     }
-    
+
     header .navar{
         margin-top: 20px;
         flex-direction: column;
@@ -1194,11 +1429,11 @@ footer .footer_logo h3{
         margin-left: 50px;
     }
 
-   
-   }
 
-   
-   @media screen and (max-width: 538px){
+}
+
+
+@media screen and (max-width: 538px){
     header .logo{
         margin-bottom: 10px;
         font-size: 10px;
@@ -1208,7 +1443,7 @@ footer .footer_logo h3{
     header .container {
         flex-direction: column;
         text-align: center;
-       
+
     }
     header .container h2{
         margin-top:10px;
@@ -1271,13 +1506,13 @@ footer .footer_logo h3{
         font-weight: 300;
         font-size: 15px;
     }
-    
+
     section .container .info .son-info h4{
         font-weight: 400;
         font-size: 13px;
     }
-    
-    
+
+
     section .container .info .son-info h5{
         font-weight: bolder;
         color: #aaa;
@@ -1306,14 +1541,14 @@ footer .footer_logo h3{
         border-left: 1px solid rgb(207, 202, 202);
         background: var(--blue-green-dark);
         color: #fff;
-        
-        
+
+
     }
     section .container-center{
         display: flex;
         justify-content: center;
         align-content: center;
-        
+
     }
     section .container{
         padding: 20px 20px;
@@ -1328,17 +1563,17 @@ footer .footer_logo h3{
         border-bottom: 1px solid rgb(207, 202, 202);
         border-left: 1px solid rgb(207, 202, 202);
         border-radius: 23px;
-        
+
     }
 
-       
+
     footer .footer_logo{
         margin-top: 40px;
         text-align: initial;   
         font-weight: 400;
         margin-left: 0;
         font-size: 12px;
-    
+
     }  
     section{
         flex-direction: column;
@@ -1346,7 +1581,7 @@ footer .footer_logo h3{
     header .navar a{
         flex-direction: column;
     }
-    
+
     header .navar{
         margin-top: 20px;
         flex-direction: column;
@@ -1357,18 +1592,18 @@ footer .footer_logo h3{
         margin-left: 50px;
     }
 
-   
-   }
-   @media screen and (max-width: 1366px){
+
+}
+@media screen and (max-width: 1366px){
 
     section .container-alert{
         margin-left: -590px;
         margin-right: 50px;
         margin-top: -50px;
     }
-   }
+}
 
-   @media screen and (max-width: 1420px){
+@media screen and (max-width: 1420px){
     footer .footer_logo h3{
         margin-top: 20px;
         text-align: initial;   
@@ -1376,13 +1611,13 @@ footer .footer_logo h3{
         margin: auto;
         margin-left: 28.75em; 
         font-size: 18px;
-    
-    }
-    
 
-   }
-   @media screen and (max-width: 1220px){
-    
+    }
+
+
+}
+@media screen and (max-width: 1220px){
+
     footer .footer_logo h3{
         margin-top: 20px;
         text-align: initial;   
@@ -1390,25 +1625,25 @@ footer .footer_logo h3{
         margin: auto;
         margin-left: 24.75em; 
         font-size: 18px;
-    
+
     }
     section .container-alert{
         margin-left: -590px;
         margin-right: 50px;
         margin-top: -50px;
     }
-   }
-   @media screen and (max-width: 1171px){
-    
+}
+@media screen and (max-width: 1171px){
+
     section .container-alert{
         margin-left: -40px;
         margin-right: -100px;
         margin-top: -50px;
     }
 }
-   
-   @media screen and (max-width: 1172px){
-    
+
+@media screen and (max-width: 1172px){
+
     section .container-alert{
         margin-left: -440px;
         margin-right: 100px;
@@ -1447,13 +1682,13 @@ footer .footer_logo h3{
         font-weight: 300;
         font-size: 15px;
     }
-    
+
     section .container .info .son-info h4{
         font-weight: 400;
         font-size: 13px;
     }
-    
-    
+
+
     section .container .info .son-info h5{
         font-weight: bolder;
         color: #aaa;
@@ -1478,14 +1713,14 @@ footer .footer_logo h3{
         border-left: 1px solid rgb(207, 202, 202);
         background: var(--blue-green-dark);
         color: #fff;
-        
-        
+
+
     }
     section .container-center{
         display: flex;
         justify-content: center;
         align-content: center;
-        
+
     }
     section .container{
         padding: 20px 20px;
@@ -1500,7 +1735,7 @@ footer .footer_logo h3{
         border-bottom: 1px solid rgb(207, 202, 202);
         border-left: 1px solid rgb(207, 202, 202);
         border-radius: 23px;
-        
+
     }
 }
 @media screen and (max-width: 1080px){
@@ -1514,7 +1749,7 @@ footer .footer_logo h3{
         height: 50px;
         background: #000;
         color: #000;
-        
+
         font-size: 20px;
         font-weight: 18.75em;
         border: none;
@@ -1525,7 +1760,7 @@ footer .footer_logo h3{
         position: relative; 
         overflow: hidden; 
         background-color: #f0c44e;
-        
+
     }
     section .container .info .son-info h2,
     section .container .info .son-info h3,
@@ -1539,7 +1774,7 @@ footer .footer_logo h3{
         margin-right: 50px;
         font-weight: 200;
         font-size: 20px;
-}
+    }
 }
 
 
@@ -1553,7 +1788,7 @@ footer .footer_logo h3{
     header .container {
         flex-direction: column;
         text-align: center;
-       
+
     }
     header .container h2{
         margin-top:10px;
@@ -1616,13 +1851,13 @@ footer .footer_logo h3{
         font-weight: 300;
         font-size: 15px;
     }
-    
+
     section .container .info .son-info h4{
         font-weight: 400;
         font-size: 13px;
     }
-    
-    
+
+
     section .container .info .son-info h5{
         font-weight: bolder;
         color: #aaa;
@@ -1648,14 +1883,14 @@ footer .footer_logo h3{
         border-left: 1px solid rgb(207, 202, 202);
         background: var(--blue-green-dark);
         color: #fff;
-        
-        
+
+
     }
     section .container-center{
         display: flex;
         justify-content: center;
         align-content: center;
-        
+
     }
     section .container{
         padding: 20px 20px;
@@ -1670,17 +1905,17 @@ footer .footer_logo h3{
         border-bottom: 1px solid rgb(207, 202, 202);
         border-left: 1px solid rgb(207, 202, 202);
         border-radius: 23px;
-        
+
     }
 
-       
+
     footer .footer_logo h3{
         margin-top: 20px;
         text-align: initial;   
         font-weight: 400;
         margin-left: 0;
         font-size: 12px;
-    
+
     }  
     section{
         flex-direction: column;
@@ -1688,7 +1923,7 @@ footer .footer_logo h3{
     header .navar a{
         flex-direction: column;
     }
-    
+
     header .navar{
         margin-top: 20px;
         flex-direction: column;
@@ -1699,5 +1934,5 @@ footer .footer_logo h3{
         margin-left: 50px;
     }
 
-   
-   }
+
+}
