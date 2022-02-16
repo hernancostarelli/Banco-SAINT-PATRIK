@@ -11,6 +11,7 @@
     align-items: center; 
     text-align: center;
     flex-direction: column;
+    margin-left: 100px;
 }
 section .opera{
     display: flex;
@@ -23,11 +24,7 @@ section .opera{
     margin-left: 50px;  
     background: #fff;
     margin-left: 40px;
-    margin-right: 100px;
-    border-top: 1px solid var(--blue-green-dark);
-    border-right: 1px solid var(--blue-green-dark);
-    border-bottom: 1px solid var(--blue-green-dark);
-    border-left: 1px solid var(--blue-green-dark);
+    margin-right: 100px; 
     border-radius: 23px;
 
 }
@@ -52,6 +49,8 @@ section .opera{
     justify-content: space-around;
     align-items: ;   
     text-align: center;
+    margin-top: -81px;
+    margin-left: 40px;
     flex-direction: column;
     font-size: 18px;    
     font-weight: 400;
@@ -66,6 +65,11 @@ section .opera{
 .select-card-one {
     margin-left: 600px;
     margin-top: -62px;
+}
+.select-card-one  p{
+    margin-left: 55px;
+    
+  
 }
 .select-card-two {
     margin-left: 200px;
@@ -216,7 +220,9 @@ section .btn-b ico-icon{
 }
 
 
-
+.super-container{
+    min-height: calc(100vh - 215px);
+}
 
 
 

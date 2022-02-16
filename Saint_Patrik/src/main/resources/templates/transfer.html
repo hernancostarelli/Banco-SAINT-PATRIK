@@ -29,6 +29,12 @@
 
 
                                                                 <br>
+                                                                    
+                                                                    <div th:if="${error}!=null" class="card text-red bg-danger mb-3">
+                                                                        <div class="card-body">
+                                                                            <p class="card-text" th:text="${error}"></p>
+                                                                        </div>
+                                                                    </div> 
                                                                     <section class="border-container"> 
 
 
@@ -104,7 +110,7 @@
 
                                                                                                         <!--Footer-->
                                                                                                         <footer th:replace="/fragments/footer :: footer"></footer>
-                                                                                                        
+
                                                                                                         <script th:replace="/fragments/script :: script"></script>
                                                                                                         </body>
 
