@@ -44,7 +44,7 @@ public class TransactionService {
      */
     @Transactional
     public TransactionEntity newTransaction(CardEntity cardOwn,
-            CardEntity cardDestiny, Double amount) throws ErrorService {
+            CardEntity cardDestiny, Double amount, String description) throws ErrorService {
 
         if (cardOwn == null) {
             throw new ErrorService("THE SOURCE CARD NUMBER CANNOT BE EMPTY");
@@ -58,6 +58,9 @@ public class TransactionService {
         if (amount < 1) {
             throw new ErrorService("THE TRANSACTION AMOUNT MUST BE GREATER THAN OR EQUAL TO ONE");
         }
+        if (description == null || description.isEmpty()) {
+            description = "Various";
+        }
 
         // TRANSACCIÓN ORIGEN
         // ORIGIN TRANSACTION
@@ -66,10 +69,10 @@ public class TransactionService {
         Date dateTransaction1 = new Date();
 
         if (cardOwn.getCredit() >= amount) {
-            
-          DecimalFormat df =new DecimalFormat("#.00");
-          df.format(amount);
-            
+
+            DecimalFormat df = new DecimalFormat("#.00");
+            df.format(amount);
+
             transaction1.setUser(cardOwn.getUser());
             transaction1.setEnabled(true);
             transaction1.setCard(cardOwn);
@@ -102,16 +105,16 @@ public class TransactionService {
             // SENDING MAIL CONFIRMING TRANSACTION
             String to_1 = cardDestiny.getUser().getMail();
             String to_2 = cardOwn.getUser().getMail();
-            String decription1 = "TRIAL TRANSFER - RECEIPT OF MONEY";
-            String decription2 = "TRIAL TRANSFER - SENDING MONEY";
+//            String decription1 = "TRIAL TRANSFER - RECEIPT OF MONEY";
+//            String decription2 = "TRIAL TRANSFER - SENDING MONEY";
 
             // ENVÍO DEL MAIL DE CONFIRMACIÓN A LA PERSONA DESTINO
             // SENDING THE CONFIRMATION EMAIL TO THE DESTINATION PERSON
-            mailService.sendMail(to_1, cardOwn.getUser(), cardDestiny.getUser(), amount, decription1);
+            mailService.sendMail(to_1, cardOwn.getUser(), cardDestiny.getUser(), amount, description);
 
             // ENVÍO DEL MAIL DE CONFIRMACIÓN A LA PERSONA ORIGEN
             // SENDING THE CONFIRMATION EMAIL TO THE PERSON OF ORIGIN
-            mailService.sendMail(to_2, cardOwn.getUser(), cardDestiny.getUser(), amount, decription2);
+            mailService.sendMail(to_2, cardOwn.getUser(), cardDestiny.getUser(), amount, description);
 
         } else {
             throw new ErrorService("THE AVAILABLE BALANCE IS NOT ENOUGH TO MAKE THE TRANSACTION");

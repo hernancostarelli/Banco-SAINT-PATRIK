@@ -104,6 +104,7 @@ public class TransactionController {
             @RequestParam(required = false) Double amount,
             @RequestParam(required = false) String description,
             RedirectAttributes redirectAttributes) {
+
         try {
             CardEntity login = (CardEntity) session.getAttribute("cardSession");
             if (login == null) {
@@ -111,8 +112,12 @@ public class TransactionController {
                 return "redirect:/login";
             }
 
+            if (description == null || description.isEmpty()) {
+                description = "Various";
+            }
+            
             CardEntity cardDestiny = cardService.searchByNumberCard(numberCardDestiny);
-            transactionService.newTransaction(login, cardDestiny, amount);
+            transactionService.newTransaction(login, cardDestiny, amount, description);
 
             Date date = new Date();
 
@@ -120,7 +125,7 @@ public class TransactionController {
             model.put("cardDestiny", numberCardDestiny);
             model.put("description", description);
             model.put("amount", amount);
-            model.addAttribute("success", " SUCCESSFULLY TRANSFERRED ");
+            model.addAttribute("success", "SUCCESSFULLY TRANSFERRED");
             return "transferconfirm.html";
 
         } catch (ErrorService e) {
@@ -145,11 +150,10 @@ public class TransactionController {
      * @throws ErrorService
      */
     @PreAuthorize("hasAnyRole('ROLE_USER','ROLE_ADMIN')")
-    //@GetMapping("/transactionByLast30Days/{idUser}")
     @GetMapping("/transactionByLast30Days")
     public String transactionByLast30Days(HttpSession session, ModelMap model,
-            //@PathVariable String idUser,
             RedirectAttributes redirectAttributes) throws ErrorService {
+
         try {
             CardEntity login = (CardEntity) session.getAttribute("cardSession");
             if (login == null) {
