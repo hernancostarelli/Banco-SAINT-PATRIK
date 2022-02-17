@@ -102,7 +102,7 @@ public class TransactionController {
     public String newTransaction(HttpSession session, ModelMap model,
             @RequestParam(required = false) String numberCardDestiny,
             @RequestParam(required = false) Double amount,
-            //            @RequestParam(required = false) String description,
+            @RequestParam(required = false) String description,
             RedirectAttributes redirectAttributes) {
         try {
             CardEntity login = (CardEntity) session.getAttribute("cardSession");
@@ -118,17 +118,16 @@ public class TransactionController {
 
             model.put("date", new SimpleDateFormat("dd-MM-yyyy").format(date));
             model.put("cardDestiny", numberCardDestiny);
-            model.put("description", "SEND");
+            model.put("description", description);
             model.put("amount", amount);
-            model.addAttribute("success", "THE TRANSACTION WAS SUCCESSFULLY GENERATED");
+            model.addAttribute("success", " SUCCESSFULLY TRANSFERRED ");
+
 
             return "transferconfirm.html";
-
+            
         } catch (ErrorService e) {
+            
             System.out.println(e.getMessage());
-            //model.addAttribute("error", e.getMessage());
-            //redirectAttributes.addFlashAttribute("idUser", idUser);
-//            model.addAttribute("idCardDestiy", cardDestiny);
             redirectAttributes.addFlashAttribute("error", e.getMessage());
             redirectAttributes.addFlashAttribute("amount", amount);
 
