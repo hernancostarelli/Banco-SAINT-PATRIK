@@ -116,10 +116,10 @@ public class TransactionController {
 
             Date date = new Date();
 
-            redirectAttributes.addFlashAttribute("date", new SimpleDateFormat("dd-MM-yyyy").format(date));
-            redirectAttributes.addFlashAttribute("cardDestiny", numberCardDestiny);
-            redirectAttributes.addFlashAttribute("description", "SEND");
-            redirectAttributes.addFlashAttribute("amount", amount);
+            model.put("date", new SimpleDateFormat("dd-MM-yyyy").format(date));
+            model.put("cardDestiny", numberCardDestiny);
+            model.put("description", "SEND");
+            model.put("amount", amount);
             model.addAttribute("success", "THE TRANSACTION WAS SUCCESSFULLY GENERATED");
 
             return "transferconfirm.html";
