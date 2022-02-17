@@ -121,12 +121,10 @@ public class TransactionController {
             model.put("description", description);
             model.put("amount", amount);
             model.addAttribute("success", " SUCCESSFULLY TRANSFERRED ");
-
-
             return "transferconfirm.html";
-            
+
         } catch (ErrorService e) {
-            
+
             System.out.println(e.getMessage());
             redirectAttributes.addFlashAttribute("error", e.getMessage());
             redirectAttributes.addFlashAttribute("amount", amount);
