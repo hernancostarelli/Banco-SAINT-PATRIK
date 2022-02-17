@@ -133,6 +133,7 @@ public class TransactionController {
             System.out.println(e.getMessage());
             redirectAttributes.addFlashAttribute("error", e.getMessage());
             redirectAttributes.addFlashAttribute("amount", amount);
+            redirectAttributes.addFlashAttribute("description", description);
 
             return "redirect:/transaction/newTransactiong";
         }
