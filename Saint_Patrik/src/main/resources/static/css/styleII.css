@@ -428,6 +428,9 @@ section .btn-t {
     background-color: #f0c44e;
 
 }
+.comment{
+    margin-left: 8.5em; 
+}
 
 section .btn-t:hover{
     color: #000;
