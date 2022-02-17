@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>St Patrick's Bank</title>
     <link rel="shortcut icon" href="/img/logo.png">
-    <!--<link rel="stylesheet" href="/css/style.css">-->
+   
     <link rel="stylesheet" href="/css/styleII.css">
     <link rel="stylesheet" href="/css/style_transfer.css">
 
@@ -19,87 +19,84 @@
 </head>
 <body>
 
-    <!-- HEADER -->
+<!-- HEADER -->
 
-    <header th:replace="/fragments/header :: header"></header>
-    <br>
-    <br>
-    <!-- MAIN -->
-    <div class="super-container">
+<header th:replace="/fragments/header :: header"></header>
+<br>
+<br>
+<!-- MAIN -->
+<div class="super-container">
+<br>
 
-
-
-                 <br>
-                                                                    
-                  <div th:if="${error}!=null" class="card text-red bg-danger mb-3">
-                       <div class="card-body">
-                        <p class="card-text" th:text="${error}"></p>
-                        </div>
-                   </div> 
-            <section class="border-container"> 
-
-      
-
-            <h3>Transfer</h3>    
-
-            <div class="opera-master">
+    <div th:if="${error}!=null" class="card text-red bg-danger mb-3">
+        <div class="card-body">
+            <p class="card-text" th:text="${error}"></p>
+        </div>
+    </div> 
+    <section class="border-container"> 
 
 
 
-                <form action="/transaction/newTransactionp" method="POST">
+        <h3>Transfer</h3>    
 
-                    <div class="opera">
-
-
-                        <br> 
-
-                        <div class="transfer-Operation">  
-                            <br>  
+        <div class="opera-master">
 
 
 
+            <form action="/transaction/newTransactionp" method="POST">
 
-                            <div class="select-card-master">
-                                <div class="select-card-one">
-                                    <h2 id="option">From Card</h2> 
-                                    <p th:text="${session.cardSession.user.name}+' '+${session.cardSession.user.surname} "></p>
-                                    <p th:text="${session.cardSession.numberCard}"></p>
-                                    <input type="hidden" name="cardOwn" th:value="${session}"/>
+                <div class="opera">
 
 
-                                </div>
-                                <div class="select-card-two">
-                                    <h2 id="option">To Card</h2>      
-                                    <select class="select-card" name="numberCardDestiny">
-                                        <option selected disabled >Select Card</option>
-                                        <option th:each="card:${cardAlta}" th:value="${card.numberCard}" th:text="${card.numberCard}"></option>
-                                    </select>
-                                </div>
+                    <br> 
+
+                    <div class="transfer-Operation">  
+                        <br>  
+
+                        <div class="select-card-master">
+                            <div class="select-card-one">
+                                <h2 id="option">From Card</h2> 
+                                <p th:text="${session.cardSession.user.name}+' '+${session.cardSession.user.surname} "></p>
+                                <p th:text="${session.cardSession.numberCard}"></p>
+                                <input type="hidden" name="cardOwn" th:value="${session}"/>
+
+
                             </div>
-                            <br>     
-
-
-                        </div> 
-                        <div class="amount-usd">
-                            <div class="wrapper">
-                                <a href="../../java/com/banco/Saint_Patrik/Controller/TransactionController.java"></a>
-                                <div class="input-data">
-                                    <input id="card" type="number" step="0.01" name="amount"  min="1" th:value="${amount}" required autocomplete="off">
-                                    <div class="underline"></div>
-                                    <label for="amount">Type the amount (USD)</label>
-                                </div>
-                            </div>    
+                            <div class="select-card-two">
+                                <h2 id="option">To Card</h2>      
+                                <select name="numberCardDestiny" class="form-select" required>
+                                    <option selected disabled >Select Card</option>
+                                    <option class="invalid-feedback" th:each="card:${cardAlta}" th:value="${card.numberCard}" th:text="${card.numberCard}"></option>
+                                </select>
+                            </div>
                         </div>
+                        <br>     
 
 
+                    </div> 
+                 
+                    <div class="amount-usd">
+                        <div class="wrapper">
+                            <a href="../../java/com/banco/Saint_Patrik/Controller/TransactionController.java"></a>
+                            <div class="input-data">
+                                <input id="card" type="number" step="0.01" name="amount"  min="1" th:value="${amount}" required autocomplete="off">
+                                <div class="underline"></div>
+                                <label for="amount">Type the amount (USD)</label>
+                            </div>
+                        </div>    
                     </div>
-            </div>
-            <div class="btn-confirm">
-                <button class="btn-t four" id="btnsubmit" type="submit" style="color: #fff; font-size: 16px; width: 600px; padding-top: 0px; "><span style="color: #000;">Confirm</span> </button>
+                <div class="comment"> 
+                    <input id="comment" type="text" name="description" class="form-control" placeholder="Add a comment" >  
+                    <br>                                                      
+                </div>
 
-            </div>
-    </div>
+                </div>
+        </div>
+        <div class="btn-confirm">
+            <button class="btn-t four" id="btnsubmit" type="submit" style="color: #fff; font-size: 16px; width: 600px; padding-top: 0px; "><span style="color: #000;">Confirm</span> </button>
 
+        </div>
+</div>
 
 </form>
 </section>
@@ -110,12 +107,10 @@
 </div>
 
 
-
-                                                                                                       <!--Footer-->
-                                                                                                        <footer th:replace="/fragments/footer :: footer"></footer>
-
-                                                                                                        <script th:replace="/fragments/script :: script"></script>
-                                                                                                        </body>
+<!--Footer-->
+<footer th:replace="/fragments/footer :: footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
 
 
 
