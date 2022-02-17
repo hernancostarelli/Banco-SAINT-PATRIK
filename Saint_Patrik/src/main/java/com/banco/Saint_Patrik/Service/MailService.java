@@ -37,7 +37,11 @@ public class MailService {
                 + "\n\nTo: " + user2.getName() + " " + user2.getSurname()
                 + "\nMail: " + user2.getMail()
                 + "\n\nAmount: " + value
-                + "\n\nReason: " + decription;
+                + "\n\nReason: " + decription
+                + "\n\n\n\n===================================================="
+                + "\nThank you for using our service !!"
+                + "\nContact: (000) 111 0000 - bancosaintpatrick@gmail.com"
+                + "\n====================================================";
 
         SimpleMailMessage mail = new SimpleMailMessage();
 
@@ -50,6 +54,3 @@ public class MailService {
     }
 
 }
-
-
-
