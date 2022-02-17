@@ -9,17 +9,11 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
 public class UserEntity {
 
     @Id
