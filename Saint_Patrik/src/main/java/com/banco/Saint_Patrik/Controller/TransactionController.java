@@ -118,9 +118,12 @@ public class TransactionController {
 
             model.put("date", new SimpleDateFormat("dd-MM-yyyy").format(date));
             model.put("cardDestiny", numberCardDestiny);
+
             model.put("description", description);
             model.put("amount", amount);
             model.addAttribute("success", " SUCCESSFULLY TRANSFERRED ");
+
+           
 
             return "transferconfirm.html";
             
