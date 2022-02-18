@@ -2,12 +2,12 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="/fragments/head :: head"></head>
 <body>
-     <!--HEADER--> 
+    <!--HEADER--> 
 
     <header th:replace="/fragments/header :: header"></header>
     <br>
     <br>
-     <!--MAIN--> 
+    <!--MAIN--> 
     <div class="super-container">     
 
         <br>
@@ -24,12 +24,11 @@
                                 <th id="type" scope="col"></th>
                                 <th id="date" scope="col"></th>
                                 <th id="amount" scope="col"></th>
-
-
                             </tr>
                         </thead>
                         <tbody>
-                            <tr th:each="transactions:${last30Days}">                           
+                            
+                            <tr th:each="transactions:${allTransaction}">                           
                                 <td id="type"th:text="${transactions.type}"></td>                     
                                 <!--<td id="date" th:text="${transactions.dateTransaction}"></td>-->  
                                 <td id="date" th:text="${#dates.format(transactions.dateTransaction, 'dd - MM - yyyy')}"></td>
@@ -41,13 +40,13 @@
 
 
                         </tbody>
-                      </table>             
-                                   
-               
-              
-                 </div>                                                                                                                      
-                </div>
-              
+                    </table>             
+
+
+
+                </div>                                                                                                                      
+            </div>
+
             <div class="btn-button">
                 <button id="button" type="button" class="btn" ><ion-icon name="chevron-down-sharp" id="arrow" style="font-size: 30px; margin: auto; margin-top: 5px; transition: 0.5s;"></ion-icon></button>
             </div>
