@@ -18,15 +18,15 @@
 }
 
 html{
-   overflow: auto;
-   overflow-x: hidden;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 body{
     background: #fff;
     font-family: 'Roboto';
-   
-   
+
+
 }
 .container{
     width: 95%;
@@ -115,7 +115,7 @@ header nav a.active{
     80%{
         transform: translateX(0%);
     }
-    
+
 }
 
 .content-alert .alert{
@@ -271,7 +271,7 @@ section{
     80%{
         transform: translateY(0%);
     }
-    
+
 }
 
 section .operation{
@@ -280,10 +280,10 @@ section .operation{
     margin: 30px;
     background: #fff;
     width: 90%;
-    margin-left: 75px;
+    margin-left: 105px;
     margin-right: 10px;
     border-radius: 23px;
-    
+
 
 }
 
@@ -333,14 +333,14 @@ section .operation{
 .table #type{    
     font-size: 18px;
     line-height: 2;
-    width: 100px;
+    width: 130px;
     font-weight: 400;
     margin-left: -190px;
 
 }
 .table #date{
     font-size: 20px;
-    width: 140px;
+    width: 150px;
     line-height: 2;
     letter-spacing: 1px;    
     font-weight: 100;
@@ -351,6 +351,7 @@ section .operation{
 
     font-size: 23px;
     line-height: 2;
+    width: 200px;
     font-weight: 400;
     left: -150px;
 
