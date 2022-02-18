@@ -31,7 +31,7 @@ public class LoginController {
 
             return "redirect:/login";
         }
-//        List<TransactionEntity> allTransactions = cardService.searchAllTransactions(login.getId());
+
         List<TransactionEntity> allTransactions = transactionService.searchTransactionByLast30Days(login.getId());
         model.addAttribute("transactions", allTransactions);
 
