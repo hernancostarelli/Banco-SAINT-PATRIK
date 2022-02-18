@@ -44,11 +44,11 @@ public class TransactionController {
                 return "redirect:/login";
             }
 
-//            String idUser = login.getUser().getId();
-            List<TransactionEntity> listTransaction = transactionService.searchTransactionByLast30Days(login.getId());
-//            List<TransactionEntity> listTransaction = transactionService.searchTransactionByLast30Days(login.getId());
+            List<TransactionEntity> listTransaction1 = transactionService.searchTransactionByLast30Days(login.getId());
+            List<TransactionEntity> listTransaction2 = transactionService.searchTransactionByCardId(login.getId());
 
-            model.addAttribute("last30Days", listTransaction);
+            model.addAttribute("last30Days", listTransaction1);
+            model.addAttribute("allTransaction", listTransaction2);
 
             return "transaction.html";
 
@@ -97,6 +97,19 @@ public class TransactionController {
         return "transfer.html";
     }
 
+    /**
+     * MÉTODO PARA REALIZAR UNA TRANSACCIÓN
+     *
+     * METHOD FOR MAKING A TRANSACTION
+     *
+     * @param session
+     * @param model
+     * @param numberCardDestiny
+     * @param amount
+     * @param description
+     * @param redirectAttributes
+     * @return
+     */
     @PreAuthorize("hasAnyRole('ROLE_USER','ROLE_ADMIN')")
     @PostMapping("/newTransactionp")
     public String newTransaction(HttpSession session, ModelMap model,
@@ -115,7 +128,7 @@ public class TransactionController {
             if (description == null || description.isEmpty()) {
                 description = "Various";
             }
-            
+
             CardEntity cardDestiny = cardService.searchByNumberCard(numberCardDestiny);
             transactionService.newTransaction(login, cardDestiny, amount, description);
 
