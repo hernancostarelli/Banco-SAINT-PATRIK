@@ -14,7 +14,9 @@
 
                         <div class="balance">
                             <h3>My balance</h3>
-                            <h2  th:if="${session.cardSession != null}" th:text="${session.cardSession.credit} +' USD'"> <span>USD</span></h2>   
+                                <!--<h2  th:if="${session.cardSession != null}" th:text="${session.cardSession.credit} +' USD'"> <span>USD</span></h2>   -->
+                                <h2  th:if="${session.cardSession != null}" th:text="${#numbers.formatDecimal(session.cardSession.credit, 0, 'POINT', 2, 'COMMA')} +' USD'"> <span>USD</span></h2>  
+                                <!--#numbers.formatDecimal(session.cardSession.credit, 0, 'COMMA', 2, 'POINT')-->
                         </div>    
 
 
@@ -42,10 +44,11 @@
                                         <tbody >
                                             <tr th:each="transactions:${transactions}">                           
                                                 <td id="type"th:text="${transactions.type}"></td>                     
-                                                <td id="date" th:text="${transactions.dateTransaction}"></td>                    
+                                                <td id="date" th:text="${#dates.format(transactions.dateTransaction, 'dd - MM - yyyy')}"></td>   
+                                                <!--#dates.format(transactions.dateTransaction, 'dd-MMM-yyyy')-->
                                                 <td >
-                                                    <span id="amount" th:if="${transactions.type.name()=='SEND'}" th:text="'- US$ '+${transactions.amount}"></span>
-                                                    <span id="amount" th:unless="${transactions.type.name()=='SEND'}" th:text="'+ US$ '+${transactions.amount}"></span>
+                                                    <span id="amount" th:if="${transactions.type.name()=='SEND'}" th:text="'- US$ '+${#numbers.formatDecimal(transactions.amount, 0, 'POINT', 2, 'COMMA')}"></span>           
+                                                    <span id="amount" th:unless="${transactions.type.name()=='SEND'}" th:text="'+ US$ '+${#numbers.formatDecimal(transactions.amount, 0, 'POINT', 2, 'COMMA')}"></span>
                                                 </td>                                                                        
                                             </tr>
 

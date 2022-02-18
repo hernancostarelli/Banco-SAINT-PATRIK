@@ -31,10 +31,11 @@
                         <tbody>
                             <tr th:each="transactions:${last30Days}">                           
                                 <td id="type"th:text="${transactions.type}"></td>                     
-                                <td id="date" th:text="${transactions.dateTransaction}"></td>                    
+                                <!--<td id="date" th:text="${transactions.dateTransaction}"></td>-->  
+                                <td id="date" th:text="${#dates.format(transactions.dateTransaction, 'dd - MM - yyyy')}"></td>
                                 <td >
-                                    <span id="amount" th:if="${transactions.type.name()=='SEND'}" th:text="'- US$ '+${transactions.amount}"></span>
-                                    <span id="amount" th:unless="${transactions.type.name()=='SEND'}" th:text="'+ US$ '+${transactions.amount}"></span>
+                                    <span id="amount" th:if="${transactions.type.name()=='SEND'}" th:text="'- US$ '+${#numbers.formatDecimal(transactions.amount, 0, 'POINT', 2, 'COMMA')}"></span>
+                                    <span id="amount" th:unless="${transactions.type.name()=='SEND'}" th:text="'+ US$ '+${#numbers.formatDecimal(transactions.amount, 0, 'POINT', 2, 'COMMA')}"></span>
                                 </td>                                                                        
                             </tr>
 
