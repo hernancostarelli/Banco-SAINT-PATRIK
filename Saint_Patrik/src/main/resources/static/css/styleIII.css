@@ -69,26 +69,26 @@
 .table-max #type{    
     font-size: 18px;
     line-height: 2;
-    width: 100px;
+    width: 130px;
     font-weight: 400;
-    margin-left: -100px;
+    margin-left: -190px;
 
 }
 .table-max #date{
     font-size: 20px;
-    width: 160px;
+    width: 150px;
     line-height: 2;
-    letter-spacing: 0.1cm;    
+    letter-spacing: 1px;    
     font-weight: 100;
+    margin-left: 0px;
 }
 
 .table-max #amount{
-
     font-size: 23px;
     line-height: 2;
+    width: 200px;
     font-weight: 400;
     left: -150px;
-
 
 }
 .table-max #amount #span-amount{
